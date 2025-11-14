@@ -1,6 +1,6 @@
 // src/components/FormBuilder.jsx
 import React, { useState } from 'react';
-import FieldPalette from '../fieldPalette.jsx';
+import FieldPalette from '../fieldPalette/fieldPalette.jsx';
 // Import Firestore helpers from the previous plan (Step 8)
 import { db } from '../../firebaseConfig.js'; 
 import { collection, addDoc } from 'firebase/firestore';
@@ -58,7 +58,7 @@ const handleFieldUpdate = (id, key, value) => {
       <FieldPalette onAddField={handleAddField} />
 
       {/* RIGHT SIDE: Builder Canvas */}
-      <div style={{ flex: 1, padding: '20px', border: '1px solid lightgray', marginLeft: '20px' }}>
+      <div style={{ flex: 1, padding: '20px', marginLeft: '20px' }}>
         <input 
           type="text"
           value={formTitle}
@@ -67,7 +67,7 @@ const handleFieldUpdate = (id, key, value) => {
         />
 
 {formFields.map(field => (
-  <div key={field.id} style={{ border: '1px dashed blue', padding: '10px', marginBottom: '10px' }}>
+  <div key={field.id} className={styles.inputDisplay}>
     {/* Existing Label/Required Inputs... */}
     <input
       type="text"
@@ -114,7 +114,7 @@ const handleFieldUpdate = (id, key, value) => {
   </div>
 ))}
 
-        <button onClick={saveForm} style={{ marginTop: '20px', padding: '10px 20px' }}>
+        <button onClick={saveForm} className='primary-button'>
           Save Form to Firestore
         </button>
       </div>

@@ -1,0 +1,23 @@
+.palette {
+    padding: 10px;
+    width: 200px;
+    border-radius: 8px;
+    background-color: var(--SECONDARY-COLOR);
+    box-shadow: 4px 4px 8px rgba(51, 51, 51, 0.2);
+    height: 80vh;
+}
+
+.palette button {
+    height: 50px;
+    width: 100%;
+    text-align: start;
+    border-bottom: 1px solid var(--MIDDLE-GREY);
+
+}
+
+.paletteHeader {
+    font-family: inherit;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+
+}

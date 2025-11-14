@@ -1,4 +1,6 @@
 // src/components/FieldPalette.jsx
+import styles from './fieldPalette.module.css'
+
 const FIELD_TYPES = [
   { type: 'text', label: 'Text Input' },
   { type: 'checkbox', label: 'Checkbox' },
@@ -7,8 +9,8 @@ const FIELD_TYPES = [
 ];
 
 const FieldPalette = ({ onAddField }) => (
-  <div style={{ border: '1px solid #ccc', padding: '10px', width: '200px' }}>
-    <h4>Field Types</h4>
+  <div className={styles.palette}>
+    <h4 className={styles.paletteHeader}>Field Types</h4>
     {FIELD_TYPES.map(field => (
       <button
         key={field.type}

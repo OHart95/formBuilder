@@ -4,6 +4,7 @@
 
 :root {
   --PRIMARY-COLOR: #143275;
+  --SKANSKA-GREEN: RGB(62,206,123);
   --FONT-COLOR: RGB(245,245,245);
   --SECONDARY-COLOR: RGB(245,245,245);
   --MIDDLE-GREY: RGB(214,214,214);
@@ -70,6 +71,13 @@ button, input[type="submit"] {
     background: none;
 }
 
+input[type="text"] {
+  border: 1px solid rgb(124, 124, 124);
+  border-radius: 4px;
+  padding-left: 8px;
+  margin-bottom: 10px;
+}
+
 /* 9. Prevent text overflow */
 p,
 h1,
@@ -90,10 +98,18 @@ h1, h2, h3 {
 /* ------------------------------------------------------------------------------------ */
 
 .primary-button {
-  fill: var(--PRIMARY-COLOR);
+  background-color: var(--SKANSKA-GREEN);
+  border: 1px solid var(--SKANSKA-GREEN);
+  padding: 5px;
+  margin-top: 10px;
+  color: rgb(51, 51, 51);
+  border-radius: 8px;
+}
+
+.primary-button:hover {
+  background-color: var(--PRIMARY-COLOR);
   border: 1px solid var(--PRIMARY-COLOR);
   color: var(--FONT-COLOR);
-  border-radius: 8px;
 }
 
 .secondary-button {
@@ -106,4 +122,8 @@ h1, h2, h3 {
 .secondary-button:hover {
   background-color: var(--PRIMARY-COLOR);
   color: var(--FONT-COLOR);
+}
+
+.secondary-button:disabled {
+  border-color: var(--MIDDLE-GREY);
 }
